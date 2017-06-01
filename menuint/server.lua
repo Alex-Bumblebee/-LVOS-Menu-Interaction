@@ -1,5 +1,4 @@
-require "resources/essentialmode/lib/MySQL"
-MySQL:open("localhost", "losvanillaos", "root", "")
+require "resources/mysql-async/lib/MySQL"
 
 ---------------------------------- FUNCTION ---------------------------------
 
@@ -9,9 +8,10 @@ MySQL:open("localhost", "losvanillaos", "root", "")
 -- EN -- Function : Get Job User
 -- EN -- Param(s) : player = ID Player
 function whereIsJob(player)
-  local executed_query = MySQL:executeQuery("SELECT job FROM users WHERE identifier = '@identifier'", {['@identifier'] = player})
-  local result = MySQL:getResults(executed_query, {'job'}, "job")
-  return result[1].job
+--MySQL.Async.fetchAll("SELECT job FROM users WHERE identifier = @identifier", {['@identifier'] = player}, function(result)
+--	return result[1].job
+--end)
+  return MySQL.Sync.fetchScalar("SELECT job FROM users WHERE identifier = @identifier", {['@identifier'] = player})
 end
 
 ---------------------------------- EVENEMENT ---------------------------------
