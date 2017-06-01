@@ -7,6 +7,7 @@ Resources for FiveM -  Interacts with the person closest to the player: Giving m
  **Required**
 
 - EssentialMode 2.X (SQL Version)
+- [MYSQL Async](https://github.com/brouznouf/fivem-mysql-async)
 - Optional (according to your needs): [Simple Banking](https://forum.fivem.net/t/release-simple-banking-2-0-now-with-gui/13896) (For Transfer, Giving Cash)
 - Optional (according to your needs) : [ID Card](https://github.com/PandaBasketteur/-LVOS-id-card) (For ID Card)
 - Optional (according to your needs) : [Job System](https://github.com/PandaBasketteur/Jobs-System-and-Paycheck) (For menu interaction job)
